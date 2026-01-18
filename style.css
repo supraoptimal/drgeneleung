@@ -1,0 +1,109 @@
+/* Simple portfolio styling for a modern, clean look */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.site-header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+}
+.site-title {
+    margin: 0;
+    font-size: 2rem;
+}
+.site-nav {
+    margin-top: 0.5rem;
+}
+.site-nav a {
+    color: #fff;
+    margin-right: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+    background-color: #0070f3;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+.hero h2 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto 0;
+}
+
+/* Content sections */
+.about, .writing, .contact {
+    padding: 3rem 0;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.about h2, .writing h2, .contact h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #0070f3;
+}
+.writing ul {
+    list-style: none;
+    padding-left: 0;
+}
+.writing li {
+    margin-bottom: 0.5rem;
+}
+.writing a {
+    color: #0070f3;
+    text-decoration: none;
+}
+.writing a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .site-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .site-nav a {
+        margin: 0.5rem 0;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
