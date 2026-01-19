@@ -177,7 +177,7 @@ h1 {
   width: min(220px, 100%);
   aspect-ratio: 1 / 1;
   border-radius: 999px;
-  border: 1px solid var(--panel-border);
+  border: 3px solid white;
   display: grid;
   place-items: center;
   position: relative;
