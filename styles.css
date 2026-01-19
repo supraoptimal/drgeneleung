@@ -160,7 +160,7 @@ h1 {
 }
 
 .hero-aside {
-  padding: 28px 24px;
+  padding: 20px 16px;
   border-radius: var(--radius);
   border: 1px solid var(--panel-border);
   background: linear-gradient(
@@ -174,7 +174,7 @@ h1 {
 }
 
 .monogram {
-  width: min(220px, 100%);
+  width: min(180px, 100%);
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   border: 12px solid white;
