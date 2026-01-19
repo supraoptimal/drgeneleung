@@ -1,176 +1,103 @@
-<!doctype html>
-<html lang="en-HK">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dr. Gene Leung — Orthopaedic Surgeon</title>
-    <meta
-      name="description"
-      content="Gene Leung — Orthopaedic surgeon with expertise in spine surgery. 
-      Interests in medical law, ethics, and AI/robotics in medicine."
-    />
-    <meta name="theme-color" content="#0b0b0c" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gene Leung – Orthopaedic Spine Surgeon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Gene Leung — Orthopaedic Spine Surgeon" />
-    <meta
-      property="og:description"
-      content="Orthopaedic surgeon with expertise in spine surgery. 
-      Interests in medical law, ethics, and AI/robotics in medicine."
-    />
-    <meta property="og:type" content="website" />
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <a href="#" class="brand-name">Gene Leung</a>
+        <div class="brand-subtitle">Orthopaedic Surgeon • Spine • Medico-legal • Ethics • AI</div>
+      </div>
 
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-
-    <link rel="stylesheet" href="/styles.css" />
-
-    <!-- Optional: improve typography rendering -->
-    <meta name="color-scheme" content="light dark" />
-  </head>
-
-  <body>
-    <a class="skip-link" href="#content">Skip to content</a>
-
-    <header class="site-header">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="/" aria-label="Home">GL</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#qualifications">Qualifications</a>
-          <a href="#writing">Writing</a>
-          <a href="#contact">Contact</a>
-        </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main id="content" class="container">
-      <section class="hero" aria-label="Intro">
-        <div class="hero-inner">
-          <p class="kicker">Dr. Gene Leung</p>
-          <h1>Orthopaedic Surgeon</h1>
-          <p class="lede">
-            Expertise in spine surgery.<br>
-            Interests in medical law, ethics, and AI/robotics in medicine.
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Orthopaedic spine surgeon.</h1>
+          <p class="lead">
+            I work at the intersection of surgery, ethics, medical law, and AI/robotics in medicine.
           </p>
 
-          <div class="cta-row">
-            <a class="button" href="#contact">Contact</a>
-            <a class="button ghost" href="https://geneleung.substack.com/" target="_blank" rel="noopener noreferrer">
-              Watershed (Substack)
-            </a>
-            <a class="button ghost" href="https://www.linkedin.com/in/geneleung" target="_blank" rel="noopener noreferrer">
-              LinkedIn
+          <div class="hero-actions">
+            <a class="btn" href="#writing">Read my writing</a>
+            <a class="btn btn-outline" href="https://substack.com" target="_blank" rel="noopener noreferrer">
+              Visit Substack
             </a>
           </div>
         </div>
 
-        <div class="hero-aside">
-          <img
-            src="/assets/profile.jpg"
-            alt="Gene Leung, orthopaedic spine surgeon"
-            class="hero-image"
-          />  
+        <div class="hero-photo">
+          <img src="assets/profile.jpg" alt="Profile photo of Gene Leung" class="profile-img" />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="about" class="section">
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container section-soft">
         <h2>About</h2>
-        <div class="card">
-          <p>
-            I’m an orthopaedic surgeon with a subspecialty focus in spine surgery.<br>
-            My broader interests sit at the intersection of clinical practice, medical-legal reasoning,
-            clinical ethics, and the implications of AI and robotics in medicine.
-          </p>
-        </div>
-      </section>
-
-      <section id="qualifications" class="section">
-        <h2>Qualifications</h2>
-
-        <div class="grid">
-          <article class="card">
-            <h3>University</h3>
-            <ul>
-              <li>MBChB - Bachelors in Medicine &amp; Bachelors in Surgery - CUHK</li>
-              <li>MSc Sports Medicine &amp; Health Sciences — CUHK</li>
-              <li>ChM (Trauma &amp; Orthopaedic Surgery), with Distinction — University of Edinburgh</li>
-              <li>LLB Candidate — University of London</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Professional</h3>
-            <ul>
-              <li>FRCSEd — Fellowship of the Royal College of Surgeons of Edinburgh</li>
-              <li>FRCS (Eng) — Fellowship of the Royal College of Surgeons of England</li>
-              <li>FHKCOS — Fellowship of the Hong Kong College of Orthopaedic Surgeons</li>
-              <li>FHKAM — Fellowship of the Hong Kong Academy of Medicine</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="writing" class="section">
-        <h2>Writing</h2>
-        <div class="card">
-          <p>
-            I write at <a href="https://geneleung.substack.com/" target="_blank" rel="noopener noreferrer">Watershed</a>
-            about the shifting boundaries of skill, systems, and responsibility in medicine—especially as AI and robotics accelerate.
-          </p>
-
-          <div class="links">
-            <a class="inline-link" href="https://geneleung.substack.com/" target="_blank" rel="noopener noreferrer">
-              Visit Watershed →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <div class="card">
-          <p class="muted">
-            For speaking, collaboration, or writing inquiries:
-          </p>
-
-          <div class="contact-row">
-            <a class="button ghost" href="https://www.linkedin.com/in/geneleung" target="_blank" rel="noopener noreferrer">
-              Message on LinkedIn
-            </a>
-            <button class="button ghost" type="button" id="copyLinkBtn">
-              Copy site link
-            </button>
-          </div>
-
-          <p class="tiny muted">
-            Note: This site does not provide medical advice.
-          </p>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <p class="muted">
-          © <span id="year"></span> Gene Leung · drgeneleung.com
+        <p>
+          I’m Gene Leung, an orthopaedic surgeon with expertise in spine surgery.
+          My interests include medical-legal issues, clinical ethics, and the future of medicine shaped by AI and robotics.
         </p>
-      </footer>
-    </main>
+      </div>
+    </section>
 
-    <script src="/script.js"></script>
+    <!-- WRITING -->
+    <section id="writing" class="section">
+      <div class="container section-soft">
+        <h2>Writing</h2>
+        <p class="muted">Selected posts and essays.</p>
 
-    <!-- Structured data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gene Leung",
-        "url": "https://drgeneleung.com",
-        "jobTitle": "Orthopaedic Surgeon",
-        "sameAs": [
-          "https://geneleung.substack.com/",
-          "https://www.linkedin.com/in/geneleung"
-        ]
-      }
-    </script>
-  </body>
+        <ul class="writing-list">
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Essay Title One</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Essay Title Two</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Essay Title Three</a></li>
+        </ul>
+
+        <p class="muted">
+          More writing on
+          <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container section-soft">
+        <h2>Contact</h2>
+        <p class="muted">For academic, clinical, or speaking enquiries:</p>
+
+        <p>
+          <a href="mailto:youremail@example.com">youremail@example.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small class="muted">© <span id="year"></span> Gene Leung</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
