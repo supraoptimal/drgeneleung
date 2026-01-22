@@ -259,6 +259,31 @@ h3 {
   padding: 18px 18px;
 }
 
+/* Qualification list with icons (no bullets) */
+.qual-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.qual-item {
+  display: grid;
+  grid-template-columns: 1.2em 1fr; /* icon column roughly line-height */
+  align-items: center;
+  column-gap: 0.6rem;
+}
+
+/* Small, uniform logo size */
+.qual-icon {
+  width: 1.2em;
+  height: 1.2em;
+  object-fit: contain;
+  display: block;
+  opacity: 0.95;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
