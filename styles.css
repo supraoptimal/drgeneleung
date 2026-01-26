@@ -403,5 +403,12 @@ li { margin: 8px 0; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2px; /* optical alignment with text */
+  margin-top: 2px;
+
+  /* 👇 ultra-minimal behaviour */
+  opacity: 0;
+  transition: opacity 0.2s ease 0.1s;
+}
+.info-note:hover .info-icon {
+  opacity: 0.85;
 }
