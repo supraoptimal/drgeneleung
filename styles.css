@@ -298,10 +298,11 @@ h3 {
   display: contents;
 }
 
-.qualifications-disclaimer {
+.qualifications-disclaimer{
   grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
   margin-top: 0.75rem;
-  max-width: 60ch;
 }
 
 ul {
