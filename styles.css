@@ -290,6 +290,11 @@ h3 {
   gap: 14px;
 }
 
+.qualifications-disclaimer {
+  margin-top: 0.75rem;
+  max-width: 60ch;
+}
+
 ul {
   margin: 0;
   padding-left: 18px;
