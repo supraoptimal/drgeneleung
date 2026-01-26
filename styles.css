@@ -238,6 +238,16 @@ h1 {
   margin-top: 12px;
 }
 
+#qualifications {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+#qualifications h2 {
+  grid-column: 1 / -1;
+}
+
 h2 {
   margin: 0 0 10px;
   font-size: 16px;
@@ -285,9 +295,7 @@ h3 {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  display: contents;
 }
 
 .qualifications-disclaimer {
