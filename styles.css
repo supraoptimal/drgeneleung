@@ -305,6 +305,12 @@ h3 {
   margin-top: 0.75rem;
 }
 
+.qual-divider {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid color-mix(in srgb, var(--panel-border) 60%, transparent);
+}
+
 ul {
   margin: 0;
   padding-left: 18px;
