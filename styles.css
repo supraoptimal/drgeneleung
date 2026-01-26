@@ -312,12 +312,8 @@ h3 {
 }
 
 .qual-subhead {
-  margin: 0.4rem 0 0.2rem;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--faint);
+  margin: 0.6rem 0 0.4rem;
+  opacity: 0.85;
 }
 
 ul {
