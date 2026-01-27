@@ -1,3 +1,4 @@
+/* styles.css (modified) */
 :root {
   /* Steel grey + indigo, with a non-white “warm fog” background */
   --bg: #0D0F14;                 /* deep ink (dark mode base) */
@@ -19,6 +20,12 @@
   --radius: 18px;
   --radius-sm: 14px;
   --maxw: 1040px;
+
+  /* Typography scale */
+  --text-body: clamp(16px, 1.15vw, 17.5px);
+  --text-lede: clamp(17px, 1.3vw, 18.5px);
+  --text-h1: clamp(32px, 4.6vw, 48px);
+  --text-h2: 13px;
 }
 
 /* Light mode (NOT white; warm fog) */
@@ -52,9 +59,11 @@ body {
     var(--bg);
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  line-height: 1.55;
+  line-height: 1.62;
   letter-spacing: 0.2px;
 }
+
+p, li { font-size: var(--text-body); }
 
 a {
   color: color-mix(in srgb, var(--text) 70%, var(--accent));
@@ -116,7 +125,25 @@ a:hover {
   font-size: 14px;
   color: var(--muted);
 }
-.nav-links a { padding: 6px 2px; }
+.nav-links a { padding: 6px 2px; position: relative; }
+
+/* subtle underline on hover (more “finished”) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0;
+  transform: scaleX(0.6);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.nav-links a:hover::after {
+  opacity: 0.35;
+  transform: scaleX(1);
+}
 
 .container {
   max-width: var(--maxw);
@@ -127,7 +154,7 @@ a:hover {
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 22px;
+  gap: 28px;
   padding: 22px 0 6px;
   align-items: stretch;
 }
@@ -142,7 +169,7 @@ a:hover {
 }
 
 .hero-inner {
-  padding: 28px 24px;
+  padding: 32px 28px;
   border-radius: var(--radius);
   border: 1px solid var(--panel-border);
   background: var(--panel);
@@ -150,24 +177,26 @@ a:hover {
 }
 
 .kicker {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   color: var(--muted);
-  font-size: 14px;
-  letter-spacing: 0.12em;
+  font-size: 12px;
+  opacity: 0.7;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 h1 {
   margin: 0 0 12px;
-  font-size: clamp(28px, 4.2vw, 44px);
-  line-height: 1.1;
+  font-size: var(--text-h1);
+  line-height: 1.05;
   letter-spacing: -0.02em;
 }
 
 .lede {
-  margin: 0 0 18px;
+  margin: 0 0 22px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: var(--text-lede);
+  line-height: 1.6;
   max-width: 60ch;
 }
 
@@ -192,70 +221,23 @@ h1 {
   place-items: center;
 }
 
-.monogram {
-  width: min(180px, 100%);
-  aspect-ratio: 1 / 1;
-  border-radius: 999px;
-  border: 12px solid color-mix(in srgb, var(--panel-border) 70%, var(--accent-soft));
-  display: grid;
-  place-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 8px;
-}
-
-.monogram::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.12), transparent 55%),
-              radial-gradient(circle at 70% 70%, rgba(255,255,255,0.10), transparent 55%);
-  transform: rotate(18deg);
-}
-
-.monogram img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 999px;
-}
-
-.monogram span {
-  position: relative;
-  font-size: 56px;
-  font-weight: 650;
-  letter-spacing: -0.04em;
-  color: var(--accent);
-}
-.monogram span + span {
-  margin-left: 8px;
-  opacity: 0.55;
-}
-
+/* Sections: more intentional rhythm + subtle chapter dividers */
 .section {
-  padding: 18px 0 6px;
-  margin-top: 12px;
+  padding: 32px 0 12px;
+  margin-top: 22px;
+}
+.section + .section {
+  border-top: 1px solid color-mix(in srgb, var(--panel-border) 55%, transparent);
 }
 
-#qualifications {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-#qualifications h2 {
-  grid-column: 1 / -1;
-}
-
+/* headings */
 h2 {
   margin: 0 0 10px;
-  font-size: 16px;
+  font-size: var(--text-h2);
   color: var(--muted);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-
 h3 {
   margin: 0 0 10px;
   font-size: 16px;
@@ -266,7 +248,14 @@ h3 {
   border-radius: var(--radius);
   border: 1px solid var(--panel-border);
   background: var(--panel);
-  padding: 18px 18px;
+  padding: 20px 20px;
+}
+
+/* grid wrapper (real grid now) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
 /* Qualification list with icons (no bullets) */
@@ -280,9 +269,13 @@ h3 {
 
 .qual-item {
   display: grid;
-  grid-template-columns: 1.2em 1fr; /* icon column roughly line-height */
+  grid-template-columns: 1.2em 1fr;
   align-items: center;
   column-gap: 0.6rem;
+}
+
+.qual-item span {
+  color: color-mix(in srgb, var(--text) 92%, var(--muted));
 }
 
 /* Small, uniform logo size */
@@ -294,27 +287,39 @@ h3 {
   opacity: 0.95;
 }
 
-.grid {
-  display: contents;
-}
-
 .qualifications-disclaimer{
-  grid-column: 1 / -1;
   width: 100%;
   max-width: none;
   margin-top: 0.75rem;
 }
 
+/* divider within the UL */
 .qual-divider {
   list-style: none;
   margin: 0.6rem 0 0.4rem;
   border-top: 1px solid color-mix(in srgb, var(--panel-border) 60%, transparent);
+  height: 0;
+  padding: 0;
 }
 
+/* “Non-medical” subhead as a list item (valid HTML) */
 .qual-subhead {
-  margin: 0.6rem 0 0.4rem;
-  opacity: 0.85;
+  margin: 0.7rem 0 0.35rem;
+  padding-left: calc(1.2em + 0.6rem);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  list-style: none;
 }
+
+/* Professional list: keep bullets, but consistent */
+.pro-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.pro-list li { margin: 8px 0; }
 
 ul {
   margin: 0;
@@ -351,7 +356,7 @@ li { margin: 8px 0; }
   cursor: pointer;
 }
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-0.5px);
   border-color: color-mix(in srgb, var(--accent) 35%, var(--panel-border));
 }
 .button:active { transform: translateY(0px); }
@@ -376,6 +381,8 @@ li { margin: 8px 0; }
   margin-top: 22px;
   padding-top: 16px;
   border-top: 1px solid var(--panel-border);
+  font-size: 13px;
+  color: var(--faint);
 }
 
 /* Responsive */
@@ -384,6 +391,7 @@ li { margin: 8px 0; }
   .grid { grid-template-columns: 1fr; }
   .nav-links { gap: 12px; }
 }
+
 .info-note {
   display: flex;
   align-items: flex-start;
@@ -405,7 +413,7 @@ li { margin: 8px 0; }
   justify-content: center;
   margin-top: 2px;
 
-  /* 👇 ultra-minimal behaviour */
+  /* ultra-minimal behaviour */
   opacity: 0;
   transition: opacity 0.2s ease 0.1s;
 }

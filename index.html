@@ -1,3 +1,4 @@
+<!-- index.html (modified) -->
 <!doctype html>
 <html lang="en-HK">
   <head>
@@ -6,7 +7,7 @@
     <title>Dr. Gene Leung — Orthopaedic Surgeon</title>
     <meta
       name="description"
-      content="Gene Leung — Orthopaedic surgeon with expertise in spine surgery. 
+      content="Gene Leung — Orthopaedic surgeon with expertise in spine surgery.
       Interests in medical law, ethics, and AI/robotics in medicine."
     />
     <meta name="theme-color" content="#0b0b0c" />
@@ -15,7 +16,7 @@
     <meta property="og:title" content="Gene Leung — Orthopaedic Spine Surgeon" />
     <meta
       property="og:description"
-      content="Orthopaedic surgeon with expertise in spine surgery. 
+      content="Orthopaedic surgeon with expertise in spine surgery.
       Interests in medical law, ethics, and AI/robotics in medicine."
     />
     <meta property="og:type" content="website" />
@@ -47,19 +48,31 @@
     <main id="content" class="container">
       <section class="hero" aria-label="Intro">
         <div class="hero-inner">
-          <p class="kicker">Dr. Gene Leung</p>
-          <h1>Orthopaedic Surgeon</h1>
+          <!-- swapped for cleaner semantics: H1 is name, kicker is role -->
+          <h1>Dr. Gene Leung</h1>
+          <p class="kicker">Orthopaedic Surgeon</p>
+
           <p class="lede">
-            Expertise in spine surgery.<br>
+            Expertise in spine surgery.<br />
             Interests in medical law, ethics, and AI/robotics in medicine.
           </p>
 
           <div class="cta-row">
             <a class="button" href="#contact">Contact</a>
-            <a class="button ghost" href="https://geneleung.substack.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              class="button ghost"
+              href="https://geneleung.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Watershed (Substack)
             </a>
-            <a class="button ghost" href="https://www.linkedin.com/in/geneleung" target="_blank" rel="noopener noreferrer">
+            <a
+              class="button ghost"
+              href="https://www.linkedin.com/in/geneleung"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               LinkedIn
             </a>
           </div>
@@ -78,7 +91,7 @@
         <h2>About</h2>
         <div class="card">
           <p>
-            I’m an orthopaedic surgeon with a subspecialty interest in spine surgery.<br>
+            I’m an orthopaedic surgeon with a subspecialty interest in spine surgery.<br />
             My broader interests sit at the intersection of clinical practice, medical-legal reasoning,
             clinical ethics, and the implications of AI and robotics in medicine.
           </p>
@@ -92,10 +105,10 @@
           <article class="card">
             <h3>Medical Education</h3>
 
-            <ul class="qual-list" aria-label="University qualifications">
+            <ul class="qual-list" aria-label="Education">
               <li class="qual-item">
                 <img class="qual-icon" src="/assets/cuhklogo.png" alt="CUHK logo" />
-                <span>MBChB - CUHK</span>
+                <span>MBChB — CUHK</span>
               </li>
 
               <li class="qual-item">
@@ -108,9 +121,8 @@
                 <span>ChM (Trauma &amp; Orthopaedic Surgery) with Distinction — University of Edinburgh</span>
               </li>
 
-              <li class="qual-divider"></li>
-
-              <h3 class="qual-subhead">Non-medical</h3>
+              <li class="qual-divider" aria-hidden="true"></li>
+              <li class="qual-subhead" aria-hidden="true">Non-medical</li>
 
               <li class="qual-item">
                 <img class="qual-icon" src="/assets/uollogo.png" alt="University of London logo" />
@@ -121,7 +133,7 @@
 
           <article class="card">
             <h3>Professional</h3>
-            <ul>
+            <ul class="pro-list">
               <li>FRCSEd — Fellowship of the Royal College of Surgeons of Edinburgh</li>
               <li>FRCS (Eng) — Fellowship of the Royal College of Surgeons of England</li>
               <li>FHKCOS — Fellowship of the Hong Kong College of Orthopaedic Surgeons</li>
@@ -129,17 +141,19 @@
             </ul>
           </article>
         </div>
-  <!--  Disclaimer belongs here -->
+
         <p class="tiny muted qualifications-disclaimer info-note">
           <span class="info-icon" aria-hidden="true">i</span>
           Only approved medical qualifications are relevant to clinical practice; non-medical degrees are included for information only.
         </p>
+      </section>
 
       <section id="writing" class="section">
         <h2>Writing</h2>
         <div class="card">
           <p>
-            I write at <a href="https://geneleung.substack.com/" target="_blank" rel="noopener noreferrer">Watershed</a>
+            I write at
+            <a href="https://geneleung.substack.com/" target="_blank" rel="noopener noreferrer">Watershed</a>
             about the shifting boundaries of skill, systems, and responsibility in medicine—especially as AI and robotics accelerate.
           </p>
 
@@ -154,12 +168,15 @@
       <section id="contact" class="section">
         <h2>Contact</h2>
         <div class="card">
-          <p class="muted">
-            For speaking, collaboration, or writing inquiries:
-          </p>
+          <p class="muted">For speaking, collaboration, or writing inquiries:</p>
 
           <div class="contact-row">
-            <a class="button ghost" href="https://www.linkedin.com/in/geneleung" target="_blank" rel="noopener noreferrer">
+            <a
+              class="button ghost"
+              href="https://www.linkedin.com/in/geneleung"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Message on LinkedIn
             </a>
             <button class="button ghost" type="button" id="copyLinkBtn">
@@ -175,9 +192,7 @@
       </section>
 
       <footer class="footer">
-        <p class="muted">
-          © <span id="year"></span> Gene Leung · drgeneleung.com
-        </p>
+        <p class="muted">© <span id="year"></span> Gene Leung · drgeneleung.com</p>
       </footer>
     </main>
 
@@ -191,10 +206,7 @@
         "name": "Gene Leung",
         "url": "https://drgeneleung.com",
         "jobTitle": "Orthopaedic Surgeon",
-        "sameAs": [
-          "https://geneleung.substack.com/",
-          "https://www.linkedin.com/in/geneleung"
-        ]
+        "sameAs": ["https://geneleung.substack.com/", "https://www.linkedin.com/in/geneleung"]
       }
     </script>
   </body>
