@@ -24,6 +24,14 @@
     <!-- Favicon -->
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
 
+    <!-- Google Fonts: Playfair Display (serif headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/styles.css" />
 
     <!-- Optional: improve typography rendering -->
@@ -46,7 +54,7 @@
     </header>
 
     <main id="content" class="container">
-      <section class="hero" aria-label="Intro">
+      <section class="hero fade-in" aria-label="Intro">
         <div class="hero-inner">
           <!-- swapped for cleaner semantics: H1 is name, kicker is role -->
           <h1>Dr. Gene Leung</h1>
@@ -87,18 +95,18 @@
         </div>
       </section>
 
-      <section id="about" class="section">
+      <section id="about" class="section fade-in">
         <h2>About</h2>
         <div class="card">
           <p>
-            I’m an orthopaedic surgeon with a subspecialty interest in spine surgery.<br />
+            I'm an orthopaedic surgeon with a subspecialty interest in spine surgery.<br />
             My broader interests sit at the intersection of clinical practice, medical-legal reasoning,
             clinical ethics, and the implications of AI and robotics in medicine.
           </p>
         </div>
       </section>
 
-      <section id="qualifications" class="section">
+      <section id="qualifications" class="section fade-in">
         <h2>Qualifications</h2>
 
         <div class="grid">
@@ -148,7 +156,7 @@
         </p>
       </section>
 
-      <section id="writing" class="section">
+      <section id="writing" class="section fade-in">
         <h2>Writing</h2>
         <div class="card">
           <p>
@@ -165,7 +173,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section">
+      <section id="contact" class="section fade-in">
         <h2>Contact</h2>
         <div class="card">
           <p class="muted">For speaking, collaboration, or writing inquiries:</p>
@@ -191,8 +199,10 @@
         </div>
       </section>
 
-      <footer class="footer">
-        <p class="muted">© <span id="year"></span> Gene Leung · drgeneleung.com</p>
+      <footer class="footer fade-in">
+        <div class="footer-inner">
+          <p class="footer-copy">© <span id="year"></span> Gene Leung · drgeneleung.com</p>
+        </div>
       </footer>
     </main>
 
