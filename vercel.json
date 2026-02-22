@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/SpinePath", "destination": "https://YOUR-SPINEPATH-URL.vercel.app" },
+    { "source": "/SpinePath/:path*", "destination": "https://YOUR-SPINEPATH-URL.vercel.app/:path*" }
+  ]
+}
