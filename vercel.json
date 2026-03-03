@@ -1,6 +1,7 @@
 {
   "rewrites": [
     { "source": "/SpinePath", "destination": "https://spine-path.vercel.app" },
-    { "source": "/SpinePath/:path*", "destination": "https://spine-path.app/:path*" }
+    { "source": "/SpinePath/:path*", "destination": "https://spine-path.app/:path*" },
+    { "source": "/GupSpine", "destination": "https://gup-spine.vercel.app" }
   ]
 }
