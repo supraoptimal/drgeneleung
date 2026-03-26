@@ -705,6 +705,10 @@ li {
   h2 {
     margin-bottom: 28px;
   }
+
+  .builds-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -735,9 +739,6 @@ li {
     font-size: 0.8rem;
   }
 
-  .builds-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ───────────────────────────────────────────────
@@ -762,6 +763,8 @@ li {
   text-decoration: none;
   color: var(--text);
   transition: all 0.25s ease;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .build-card:hover {
