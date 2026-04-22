@@ -294,6 +294,10 @@ h1 {
   border-top: 1px solid var(--panel-border);
 }
 
+#about {
+  padding: 52px 0;
+}
+
 
 /* ───────────────────────────────────────────────
    Headings
