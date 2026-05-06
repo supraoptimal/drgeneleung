@@ -4,6 +4,7 @@
     { "source": "/SpinePath/:path*", "destination": "https://spine-path.app/:path*" },
     { "source": "/GupSpine", "destination": "https://gup-spine.vercel.app" },
     { "source": "/intervertebra", "destination": "https://intervertebra.vercel.app/intervertebra/" },
+    { "source": "/intervertebra/", "destination": "https://intervertebra.vercel.app/intervertebra/" },
     { "source": "/intervertebra/:path*", "destination": "https://intervertebra.vercel.app/intervertebra/:path*" }
   ]
 }
