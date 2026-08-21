@@ -1,253 +1,142 @@
 <!doctype html>
-<html lang="en-HK">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gene Leung</title>
+
+    <title>Gene Leung — Writer and Builder</title>
     <meta
       name="description"
-      content="Personal site of Gene Leung — writing, side projects, and notes on law and medicine."
+      content="Gene Leung writes and builds at the intersection of medicine, technology, systems, and human judgment."
     />
-    <meta name="theme-color" content="#0b0b0c" />
+    <link rel="canonical" href="https://www.drgeneleung.com/" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f4efe5" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Gene Leung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gene Leung" />
+    <meta property="og:title" content="Gene Leung — Writer and Builder" />
     <meta
       property="og:description"
-      content="Personal site of Gene Leung — writing, side projects, and notes on law and medicine."
+      content="Gene Leung writes and builds at the intersection of medicine, technology, systems, and human judgment."
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.drgeneleung.com/" />
+    <meta property="og:image" content="https://www.drgeneleung.com/assets/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Stylised editorial portrait of Gene Leung." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gene Leung — Writer and Builder" />
+    <meta
+      name="twitter:description"
+      content="Gene Leung writes and builds at the intersection of medicine, technology, systems, and human judgment."
+    />
+    <meta name="twitter:image" content="https://www.drgeneleung.com/assets/og.jpg" />
 
-    <!-- Favicon -->
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
-    <!-- Google Fonts: Playfair Display + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="assets/portrait.webp"
+      imagesrcset="assets/portrait-720.webp 720w, assets/portrait.webp 1122w"
+      imagesizes="(min-width: 900px) 46vw, 62vw"
+    />
     <link rel="stylesheet" href="styles.css" />
-
-    <meta name="color-scheme" content="light dark" />
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
   </head>
 
-  <body>
-    <a class="skip-link" href="#content">Skip to content</a>
+  <body class="page-home">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
+    <header class="masthead">
+      <a class="wordmark" href="/">Gene Leung</a>
       <nav class="nav" aria-label="Primary">
-        <a class="brand" href="/" aria-label="Home">GL</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#qualifications">Qualifications</a>
-          <a href="#writing">Writing</a>
-          <a href="#builds">Builds</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <ul>
+          <li><a href="/bio">Bio</a></li>
+          <li>
+            <a href="https://geneleung.substack.com/" target="_blank" rel="noopener noreferrer">
+              Writing<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.geneleung.org/" target="_blank" rel="noopener noreferrer">
+              Builds<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main id="content" class="container">
+    <main id="main" class="split">
+      <h1 class="visually-hidden">Gene Leung</h1>
 
-      <section class="hero fade-in" aria-label="Intro">
-        <div class="hero-inner">
-          <h1>Dr. Gene Leung</h1>
-          <p class="kicker">Writer. Builder. Student of law and medicine.</p>
-
-          <div class="cta-row">
-            <a class="button" href="#contact">Contact</a>
-            <a
-              class="button ghost"
-              href="https://geneleung.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Watershed (Substack)
-            </a>
-            <a
-              class="button ghost"
-              href="https://www.linkedin.com/in/geneleung"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </div>
-
-          <p class="hero-disclaimer">
-            Personal site — I do not see private patients or accept referrals here.
-          </p>
-        </div>
-
-        <div class="hero-aside">
-          <img
-            src="assets/profile.jpg"
-            alt="Gene Leung"
-            class="hero-image"
+      <div class="plate">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="assets/portrait-720.webp 720w, assets/portrait.webp 1122w"
+            sizes="(min-width: 900px) 46vw, 62vw"
           />
-        </div>
-      </section>
+          <img
+            class="portrait"
+            src="assets/portrait.jpg"
+            width="1122"
+            height="1402"
+            alt="Stylised editorial portrait of Gene Leung: a head-and-shoulders figure rendered in ivory and grey against a black field."
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
+      </div>
 
-      <section id="about" class="section fade-in">
-        <h2>About</h2>
-        <p class="about-text">
-          I trained in medicine at CUHK and in orthopaedic surgery through the
-          Hong Kong and Edinburgh fellowship systems, and I'm currently reading
-          law with the University of London.
-        </p>
-      </section>
+      <div class="quotation" id="quotation">
+        <figure class="quote is-active">
+          <blockquote>
+            <p>“I would rather have questions that can’t be answered than answers that can’t be questioned.”</p>
+          </blockquote>
+          <figcaption><cite>Richard Feynman</cite></figcaption>
+        </figure>
 
-      <section id="qualifications" class="section fade-in">
-        <h2>Qualifications</h2>
+        <figure class="quote">
+          <blockquote>
+            <p>“Every adversity, every failure, every heartbreak, carries with it the seed of an equal or greater benefit.”</p>
+          </blockquote>
+          <figcaption><cite>Napoleon Hill</cite></figcaption>
+        </figure>
 
-        <div class="grid">
-          <article class="card">
-            <h3>Education</h3>
-
-            <ul class="qual-list" aria-label="Education">
-              <li class="qual-item">
-                <img class="qual-icon" src="assets/cuhklogo.png" alt="CUHK logo" />
-                <span>MBChB — CUHK</span>
-              </li>
-
-              <li class="qual-item">
-                <img class="qual-icon" src="assets/cuhklogo.png" alt="CUHK logo" />
-                <span>MSc (Sports Medicine &amp; Health Sciences) — CUHK</span>
-              </li>
-
-              <li class="qual-item">
-                <img class="qual-icon" src="assets/uoelogo.png" alt="University of Edinburgh logo" />
-                <span>ChM (Trauma &amp; Orthopaedic Surgery) with Distinction — University of Edinburgh</span>
-              </li>
-
-              <li class="qual-divider" aria-hidden="true"></li>
-              <li class="qual-subhead" aria-hidden="true">Legal Education</li>
-
-              <li class="qual-item">
-                <img class="qual-icon" src="assets/uollogo.png" alt="University of London logo" />
-                <span>LLB Candidate — University of London</span>
-              </li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Professional</h3>
-            <ul class="pro-list">
-              <li>FHKCOS — Fellowship of the Hong Kong College of Orthopaedic Surgeons</li>
-              <li>FHKAM — Fellowship of the Hong Kong Academy of Medicine</li>
-              <li>FRCSEd — Fellowship of the Royal College of Surgeons of Edinburgh</li>
-              <li>FRCS (Eng) — Fellowship of the Royal College of Surgeons of England</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="tiny muted qualifications-disclaimer">
-          Only approved medical qualifications are relevant to clinical practice;
-          non-medical degrees are included for information only.
-        </p>
-      </section>
-
-      <section id="writing" class="section fade-in">
-        <h2>Writing</h2>
-        <p class="about-text">
-          I write at
-          <a href="https://geneleung.substack.com/" target="_blank" rel="noopener noreferrer">Watershed</a>
-          about the shifting boundaries of skill, systems, and responsibility in medicine —
-          especially as AI and robotics accelerate.
-        </p>
-        <div class="links">
-          <a
-            class="inline-link"
-            href="https://geneleung.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Watershed →
-          </a>
-        </div>
-      </section>
-
-      <section id="builds" class="section fade-in">
-        <h2>Builds</h2>
-        <p class="section-lede">Independent educational tools for clinical practice.</p>
-
-        <div class="builds-list">
-          <a
-            class="build-item"
-            href="https://www.geneleung.org/GupSpine/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="build-item-text">
-              <strong>GupSpine</strong>
-              <span class="build-desc">Emergency Spine Decision Support</span>
-            </div>
-            <span class="build-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a
-            class="build-item"
-            href="https://www.geneleung.org/XFU/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="build-item-text">
-              <strong>XFU</strong>
-              <span class="build-desc">Orthopaedic Clinic Survival Guide</span>
-            </div>
-            <span class="build-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
-
-      <section id="contact" class="section fade-in">
-        <h2>Contact</h2>
-        <div class="card">
-          <p class="muted">For speaking, collaboration, or writing inquiries:</p>
-
-          <div class="contact-row">
-            <a
-              class="button ghost"
-              href="https://www.linkedin.com/in/geneleung"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Message on LinkedIn
-            </a>
-            <button class="button ghost" type="button" id="copyLinkBtn">
-              Copy site link
-            </button>
-          </div>
-
-          <p class="tiny muted info-note">
-            This is a personal website. I do not see private patients, do not
-            accept clinical referrals through this site, and provide no medical
-            advice here.
-          </p>
-        </div>
-      </section>
-
-      <footer class="footer fade-in">
-        <div class="footer-inner">
-          <p class="footer-copy">© <span id="year"></span> Gene Leung · drgeneleung.com</p>
-        </div>
-      </footer>
-
+        <figure class="quote">
+          <blockquote>
+            <p>“Everything is vague to a degree you do not realise till you have tried to make it precise.”</p>
+          </blockquote>
+          <figcaption><cite>Bertrand Russell</cite></figcaption>
+        </figure>
+      </div>
     </main>
 
     <script src="script.js"></script>
 
-    <!-- Structured data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Gene Leung",
-        "url": "https://drgeneleung.com",
-        "sameAs": ["https://geneleung.substack.com/", "https://www.linkedin.com/in/geneleung"]
+        "url": "https://www.drgeneleung.com/",
+        "sameAs": [
+          "https://geneleung.substack.com/",
+          "https://www.geneleung.org/",
+          "https://www.linkedin.com/in/geneleung"
+        ]
       }
     </script>
   </body>

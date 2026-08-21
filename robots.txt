@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drgeneleung.com/sitemap.xml
+Sitemap: https://www.drgeneleung.com/sitemap.xml
