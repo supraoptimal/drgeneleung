@@ -9,7 +9,7 @@
   --ink: #14120e;
   --ink-soft: #3a362d;
   --ink-muted: #6b6355;
-  --plate: #0f0f0f;
+  --plate: #101010;
   --rule: rgba(20, 18, 14, 0.16);
   --rule-strong: rgba(20, 18, 14, 0.32);
 
@@ -19,6 +19,10 @@
     Arial, sans-serif;
 
   --masthead-h: 4.75rem;
+  --band: clamp(2.5rem, 5.5vh, 4rem);
+  /* The artwork's head sits at ~31% of its height, so a centred image already
+     places the head high in the column; this lifts it a little further. */
+  --head-shift: -5%;
   --gutter: clamp(1.25rem, 5vw, 4.5rem);
 }
 
@@ -172,37 +176,71 @@ a {
 
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+  grid-template-columns: minmax(0, 38fr) minmax(0, 62fr);
   flex: 1 1 auto;
   min-height: 0;
 }
 
+/* The black column is page architecture: the portrait sits low inside it,
+   surrounded by black, and the field continues as a band under the quotation. */
 .plate {
   background: var(--plate);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 clamp(1rem, 2.5vw, 2.75rem);
   overflow: hidden;
 }
 
 .plate picture {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1122 / 1402;
+  max-width: min(86%, 30rem);
+  max-height: 68%;
 }
 
+/* The artwork's own ground runs 10–16 in each channel, so blending it against a
+   --plate of the same top value flattens the frame away completely: the ground
+   resolves to exactly the column colour while every part of the figure (41 and
+   up) is left untouched. No masking, and no edit to the supplied file. */
 .portrait {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: center;
+  transform: translateY(var(--head-shift));
+  mix-blend-mode: lighten;
 }
 
 .quotation {
+  position: relative;
   display: grid;
   align-content: center;
   justify-items: start;
   padding: clamp(3rem, 7vh, 6rem) clamp(1.5rem, 6vw, 6rem);
+  padding-top: calc(var(--band) + clamp(3rem, 7vh, 6rem));
+  padding-bottom: calc(var(--band) + clamp(3rem, 7vh, 6rem));
+}
+
+/* Slim continuations of the black column at the head and foot of the
+   quotation, bracketing it and tying the two sides together. */
+.quotation::before,
+.quotation::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: var(--band);
+  background: var(--plate);
+}
+
+.quotation::before {
+  top: 0;
+}
+
+.quotation::after {
+  bottom: 0;
 }
 
 .quote {
@@ -276,8 +314,8 @@ html:not(.no-js) .quote.is-active {
   padding: clamp(3rem, 9vh, 6rem) var(--gutter) clamp(3.5rem, 10vh, 6rem);
 }
 
-.eyebrow {
-  margin: 0 0 1.4rem;
+.prose .eyebrow {
+  margin: 0 0 1.6rem;
   font-family: var(--sans);
   font-size: 0.74rem;
   font-weight: 500;
@@ -435,31 +473,44 @@ html:not(.no-js) .quote.is-active {
 @media (max-width: 899px) {
   .split {
     grid-template-columns: 1fr;
-    flex: 0 0 auto;
+    grid-template-rows: auto 1fr;
+    flex: 1 1 auto;
     min-height: 0;
     padding: clamp(1.75rem, 5vh, 3rem) var(--gutter) 0;
   }
 
-  /* The plate hugs the artwork so no dead black field appears around it. */
+  /* Stacked, the black field becomes a full-bleed band with the portrait
+     resting on its lower edge, aligned with the text below. */
   .plate {
-    justify-self: start;
-    height: auto;
+    --head-shift: -2%;
+    justify-self: stretch;
+    justify-content: flex-start;
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 0 var(--gutter);
+    height: clamp(16rem, 40vh, 24rem);
+    height: clamp(16rem, 40svh, 24rem);
   }
 
-  .plate picture,
-  .portrait {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: min(48vh, 74vw);
-    max-height: min(48svh, 74vw);
-    /* The box already matches the artwork's ratio, so no fitting is needed. */
-    object-fit: fill;
+  .plate picture {
+    max-width: min(62%, 16rem);
+    max-height: 78%;
   }
 
   .quotation {
-    padding: clamp(2.25rem, 6vh, 3.25rem) 0 clamp(3rem, 9vh, 4.5rem);
+    padding: clamp(2.25rem, 6vh, 3.25rem) 0
+      calc(var(--band) + clamp(2rem, 6vh, 3.25rem));
     justify-items: start;
+  }
+
+  /* Stacked, the portrait's own band already caps the page, so only the foot
+     band remains — and it runs the full width. */
+  .quotation::before {
+    display: none;
+  }
+
+  .quotation::after {
+    right: calc(var(--gutter) * -1);
+    left: calc(var(--gutter) * -1);
   }
 
   .quote {
